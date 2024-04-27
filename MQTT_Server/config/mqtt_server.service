@@ -1,0 +1,11 @@
+[Unit]
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/var/www/MQTT_Server/config/mqtt_server.sh
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
